@@ -1,6 +1,6 @@
 {
     "name": "dunv-tslocation",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Location helpers",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
