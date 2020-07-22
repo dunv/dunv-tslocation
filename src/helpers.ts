@@ -1,12 +1,11 @@
-import { parse as qsParse, stringify as qsStringify } from 'qs';
-import { Params } from './models';
+import QueryString, { parse as qsParse, stringify as qsStringify } from 'qs';
 
 /**
  * Lightweight helper for reading url-params
  * (for usage with the history library -> react-router-dom)
  * @param search from history.location.search
  */
-export const parseParams = (search: string): Params => {
+export const parseParams = (search: string): QueryString.ParsedQs => {
     if (search.startsWith('?')) search = search.substring(1);
     return qsParse(search, { strictNullHandling: true });
 };
@@ -16,8 +15,19 @@ export const parseParams = (search: string): Params => {
  * @param search from history.location.search
  * @param newParams new params to set
  */
-export const assignParams = (search: string, newParams: Params): string => {
+export const assignParams = (
+    search: string,
+    modify?: {
+        add?: QueryString.ParsedQs;
+        remove?: string[];
+    }
+): string => {
     const params = parseParams(search);
-    Object.assign(params, newParams);
+    if (modify?.add) {
+        Object.assign(params, modify.add);
+    }
+    if (modify?.remove) {
+        modify.remove.forEach((param) => delete params[param]);
+    }
     return qsStringify(params);
 };

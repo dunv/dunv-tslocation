@@ -22,29 +22,25 @@
     "license": "MIT",
     "devDependencies": {
         "@types/chai": "^4.2.11",
-        "@types/history": "^4.7.5",
         "@types/jwt-decode": "^2.2.1",
         "@types/mocha": "^7.0.2",
-        "@types/react": "^16.9.25",
-        "@typescript-eslint/eslint-plugin": "^2.25.0",
-        "@typescript-eslint/parser": "^2.25.0",
+        "@types/qs": "^6.9.3",
+        "@typescript-eslint/eslint-plugin": "^2.34.0",
+        "@typescript-eslint/parser": "^2.34.0",
         "chai": "^4.2.0",
         "eslint": "^6.8.0",
-        "eslint-config-prettier": "^6.10.1",
-        "eslint-plugin-prettier": "^3.1.2",
-        "eslint-plugin-react": "^7.19.0",
-        "mocha": "^7.1.1",
-        "nyc": "^15.0.0",
-        "prettier": "^2.0.2",
-        "react": "^16.13.1",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-react": "^7.20.3",
+        "mocha": "^7.2.0",
+        "nyc": "^15.1.0",
+        "prettier": "^2.0.5",
         "rimraf": "^3.0.2",
-        "ts-loader": "^6.2.1",
-        "ts-node": "^8.7.0",
-        "typescript": "^3.8.3",
-        "@types/qs": "^6.9.1"
+        "ts-loader": "^6.2.2",
+        "ts-node": "^8.10.2",
+        "typescript": "^3.9.7"
     },
     "dependencies": {
-        "qs": "^6.9.3",
-        "history": "^4.10.1"
+        "qs": "^6.9.4"
     }
 }

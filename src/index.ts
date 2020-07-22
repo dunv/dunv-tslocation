@@ -1,2 +1,1 @@
-export { parseParams, assignParams } from './helpers';
-export { Params } from './models';
+export { assignParams, parseParams } from './helpers';
