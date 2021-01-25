@@ -6,8 +6,8 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "lint": "tsc --noEmit && eslint 'src/*.{js,ts,tsx}' --quiet --fix",
-        "clean": "rimraf build",
-        "build": "tsc --build",
+        "clean": "rimraf dist",
+        "build": "barrelsby --directory src/ --delete --verbose && tsc --build",
         "start": "tsc -w",
         "test": "mocha -r ts-node/register tests/**/*.test.ts",
         "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
@@ -31,6 +31,7 @@
         "@types/react-router-dom": "^5.1.7",
         "@typescript-eslint/eslint-plugin": "^4.14.0",
         "@typescript-eslint/parser": "^4.14.0",
+        "barrelsby": "^2.2.0",
         "chai": "^4.2.0",
         "eslint": "^7.18.0",
         "eslint-config-prettier": "^7.2.0",
